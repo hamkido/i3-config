@@ -1,0 +1,4 @@
+[mpd]
+command=mpc | head -1
+interval=5
+

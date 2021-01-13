@@ -1,0 +1,168 @@
+bar {
+font pango:FontAwesome 11
+position top
+status_command i3blocks
+    colors {
+        background #292b2e
+        statusline #cccccc
+        separator #666666
+        focused_workspace  #4c7899 #285577 #ffffff
+        active_workspace   #333333 #5f676a #ffffff
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   #2f343a #803030 #ffffff
+        binding_mode       #222222 #222222 #ffffff
+    }
+}
+set $mod Mod4
+bindsym $mod+x exec --no-startup-id i3lock
+bindsym $mod+s exec rofi -combi-modi window -font "Source Code Pro 12" -theme sidebar -show
+bindsym $mod+Shift+s layout toggle split
+bindsym $mod+p exec scrot -q 100
+bindsym $mod+d exec rofi -combi-modi drun -font "Source Code Pro 12" -theme sidebar -show combi
+bindsym $mod+Return exec --no-startup-id termite
+bindsym $mod+space focus mode_toggle
+bindsym $mod+control+i exec --no-startup-id xbacklight -inc 1
+bindsym $mod+control+Shift+i exec --no-startup-id xbacklight -dec 5
+bindsym $mod+Mod1+m exec --no-startup-id mpc toggle
+bindsym $mod+Mod1+n exec --no-startup-id mpc next
+bindsym $mod+Mod1+Shift+m exec --no-startup-id mpc pause
+bindsym $mod+Mod1+Shift+n exec --no-startup-id mpc prev
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+space floating toggle
+bindsym --release $mod+Shift+p exec scrot -sq100
+mode "resize" {
+bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+for_window [class=mpv] fullscreen enable
+for_window [class=mpv] floating enable
+for_window [class="^.*"] border pixel 0
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+bindsym $mod+c split h
+bindsym $mod+v split v
+bindsym $mod+b bar mode toggle
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Escape		workspace prev
+bindsym $mod+Tab      workspace next
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Mod1+Shift+1 move container to workspace $ws11
+bindsym $mod+Mod1+Shift+2 move container to workspace $ws12
+bindsym $mod+Mod1+Shift+3 move container to workspace $ws13
+bindsym $mod+Mod1+Shift+4 move container to workspace $ws14
+bindsym $mod+Mod1+Shift+5 move container to workspace $ws15
+bindsym $mod+Mod1+Shift+6 move container to workspace $ws16
+bindsym $mod+Mod1+Shift+7 move container to workspace $ws17
+bindsym $mod+Mod1+Shift+8 move container to workspace $ws18
+bindsym $mod+Mod1+Shift+9 move container to workspace $ws19
+bindsym $mod+Mod1+Shift+0 move container to workspace $ws20
+bindsym $mod+Control+Shift+1 move container to workspace $ws21
+bindsym $mod+Control+Shift+2 move container to workspace $ws22
+bindsym $mod+Control+Shift+3 move container to workspace $ws23
+bindsym $mod+Control+Shift+4 move container to workspace $ws24
+bindsym $mod+Control+Shift+5 move container to workspace $ws25
+bindsym $mod+Control+Shift+6 move container to workspace $ws26
+bindsym $mod+Control+Shift+7 move container to workspace $ws27
+bindsym $mod+Control+Shift+8 move container to workspace $ws28
+bindsym $mod+Control+Shift+9 move container to workspace $ws29
+bindsym $mod+Control+Shift+0 move container to workspace $ws30
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10
+set $ws11 11
+set $ws12 12
+set $ws13 13
+set $ws14 14
+set $ws15 15
+set $ws16 16
+set $ws17 17
+set $ws18 18
+set $ws19 19
+set $ws20 20
+set $ws21 21
+set $ws22 22
+set $ws23 23
+set $ws24 24
+set $ws25 25
+set $ws26 26
+set $ws27 27
+set $ws28 28
+set $ws29 29
+set $ws30 30
+bindsym $mod+F2 restart
+font pango: MonoSpace 11
+for_window [class="Inkscape"] move workspace $ws7
+for_window [class="firefox"] move workspace $ws2
+for_window [class="TelegramDesktop"] move workspace $ws12
+for_window [class="Tor Browser"] move workspace $ws21
+for_window [class="VirtualBox Machine"] move workspace $ws29
+for_window [class="VirtualBox Manager"] move workspace $ws30
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+Mod1+1 workspace $ws11
+bindsym $mod+Mod1+2 workspace $ws12
+bindsym $mod+Mod1+3 workspace $ws13
+bindsym $mod+Mod1+4 workspace $ws14
+bindsym $mod+Mod1+5 workspace $ws15
+bindsym $mod+Mod1+6 workspace $ws16
+bindsym $mod+Mod1+7 workspace $ws17
+bindsym $mod+Mod1+8 workspace $ws18
+bindsym $mod+Mod1+9 workspace $ws19
+bindsym $mod+Mod1+0 workspace $ws20
+bindsym $mod+Control+1 workspace $ws21
+bindsym $mod+Control+2 workspace $ws22
+bindsym $mod+Control+3 workspace $ws23
+bindsym $mod+Control+4 workspace $ws24
+bindsym $mod+Control+5 workspace $ws25
+bindsym $mod+Control+6 workspace $ws26
+bindsym $mod+Control+7 workspace $ws27
+bindsym $mod+Control+8 workspace $ws28
+bindsym $mod+Control+9 workspace $ws29
+bindsym $mod+Control+0 workspace $ws30
