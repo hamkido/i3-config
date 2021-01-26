@@ -20,10 +20,12 @@ This should be a good start for i3 hack.
 
 # dependencies #
 ## on archlinux ##
-| wm               | i3-wm      |
-| bar              | i3blocks   |
-| exec application | rofi       |
-| lock screen      | i3lock     |
-| change backlight | xbacklight |
-| screenshot       | scrot      |
-| wallpaper        | feh        |
+| package used for | package-name |
+|------------------|--------------|
+| wm               | i3-wm        |
+| bar              | i3blocks     |
+| exec application | rofi         |
+| lock screen      | i3lock       |
+| change backlight | xbacklight   |
+| screenshot       | scrot        |
+| wallpaper        | feh          |
