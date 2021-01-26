@@ -17,3 +17,13 @@ This should be a good start for i3 hack.
   * [x] mpc change music
   * [x] resize application
   * [x] windows rule with class
+
+# dependencies #
+## on archlinux ##
+| wm               | i3-wm      |
+| bar              | i3blocks   |
+| exec application | rofi       |
+| lock screen      | i3lock     |
+| change backlight | xbacklight |
+| screenshot       | scrot      |
+| wallpaper        | feh        |
