@@ -132,7 +132,10 @@ bindsym $mod+F2 restart
 font pango: MonoSpace 11
 for_window [class="Inkscape"] move workspace $ws7
 for_window [class="firefox"] move workspace $ws2
-for_window [class="TelegramDesktop"] move workspace $ws12
+#for_window [class="TelegramDesktop"] move workspace $ws12
+for_window [class="TelegramDesktop"] sticky enable
+for_window [class="TelegramDesktop"] floating enable
+for_window [class="TelegramDesktop"] move position 900 0
 for_window [class="Tor Browser"] move workspace $ws21
 for_window [class="VirtualBox Machine"] move workspace $ws29
 for_window [class="VirtualBox Manager"] move workspace $ws30
